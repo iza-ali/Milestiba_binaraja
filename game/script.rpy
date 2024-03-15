@@ -13,13 +13,13 @@ define slacker = Character("Kristers")
 
 label start:
 
-    play music "binari.wav"
+    play music "binari.mp3"
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene rb19_better
+    scene titullapa
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -49,12 +49,16 @@ menu:
         jump furry_izv
 
 label egirl_izv:
+    
+    scene rb19_better
 
-    play music "binari_stink.wav"
+    play music "binari_stink.mp3"
 
-    "Tu lēnām pieej pie Elīzas, kas tevi sākumā nepamana savu augsto Demonia dēļ. Viņa ir kā sapnis. Vismaz tavi sapņi. Tu uztaisi mazliet patētisku skaņu un viņa paskatās uz tevi"
+    "Tu lēnām pieej pie Elīzas, kas tevi sākumā nepamana savu augsto Demonia dēļ. Viņa ir kā sapnis."
+    
+    "Vismaz tavi sapņi. Tu uztaisi mazliet patētisku skaņu un viņa paskatās uz tevi"
 
-    show egirl_temp
+    show egirl1
     with fade
 
     menu:
@@ -74,6 +78,10 @@ label turp1:
     es"{i}Tas nebija, ko es gribēju teikt! Es esmu nožēlojams!{/i}"
 
     play sound "Generic_egirl_noise.mp3"
+
+    hide egirl1
+    show egirl2
+    with fade
 
     egirl "Tu kaut ko teici? Tu ar mani gribēji runāt? Nē nu, es nebrīnos."
 
@@ -123,7 +131,13 @@ label turp3:
 
     play sound "Egirl_scoff.mp3"
 
-    egirl "TU tagad mēģini MANI koļīt??? Tu mazais nožēlīgais kropli! Tu vispār zini ar ko tu runā?? Ja to vispār var saukt par runāšanu"
+    hide egirl2
+    show egirl4
+    with fade
+
+    egirl "TU tagad mēģini MANI koļīt??? Tu mazais nožēlīgais kropli!"
+
+    egirl "Tu vispār zini ar ko tu runā?? Ja to vispār var saukt par runāšanu"
 
     egirl "Tagad iedod man piecīti par to, ka es vispār ar tevi runāju"
 
@@ -140,6 +154,10 @@ label turp4:
 
     es "{i}Tā bija mana šīs nedēļas ēdiena nauda.{/i}"
 
+    hide egirl4
+    show egirl3
+    with fade
+
     egirl "Lūdzu! Noskenē šito, samaksā un redzēsi, ko gribēji."
 
     play sound "Solosana.mp3"
@@ -151,9 +169,11 @@ label turp4:
 
 label slacker_izv:
 
-    play music "binari_slacker.wav"
+    scene rb19_better
 
-    show slacker_temp
+    play music "binari_slacker.mp3"
+
+    show slacker1
     with fade
 
     "Kristers izskatās tik skaisti. Tu pieej pie viņa kāmēr viņš kaut ko tin Raiņa Bulbāra gaitenī"
@@ -168,7 +188,14 @@ label slacker_izv:
 
     es "{i}Es to no pamatskolas informātikas stundām varēju pielīdzināt{/i}"
 
-    slacker "Bet reāli, tu liecies baigi labais džeks. Gribi man palīdzēt ar mājasdarbiem? Tu man tos atsūti, es tev ļauju katru mēnesi samaksāt 10 eiro lai darītu tieši šo pašu."
+    hide slacker1
+    show slacker2
+    with fade
+
+    slacker "Bet reāli, tu liecies baigi labais džeks. Gribi man palīdzēt ar mājasdarbiem?"
+
+    slacker "Tu man tos atsūti, es tev ļauju katru mēnesi samaksāt 10 eiro lai darītu tieši šo pašu."
+
 
     menu:
         "Pieņemt piedāvājumu":
@@ -187,9 +214,20 @@ label turp5:
 
     slacker "Perfekti, tad ir sarunāts!"
 
-    "Viņš tev padod smēķējamo, tu esi ekstāzē. Tu pieskaries ar lūpām kaut kam, kur viņš tieši tāpat pieskārās… Un tad tu sāc klepot un atdod."
+    hide slacker2
+    show slacker3
+    with fade
 
-    slacker "Tu vispār domā iet uz lekcijām? Es gribēju aiziet šodien nu vismaz uz pirmo dienu bet man jāiet uz koncertu Bepo vakarā un man pirms tam ir jāizguļas. Es te tikai esmu, jo man vajag, ka mamma domā, ka esmu unītī."
+    "Viņš tev padod smēķējamo, tu esi ekstāzē. Tu pieskaries ar lūpām kaut kam, kur viņš tieši tāpat pieskārās…"
+    
+    "Un tad tu sāc klepot un atdod."
+
+    hide slacker3
+    show slacker2
+    with fade
+
+    slacker "Tu vispār domā iet uz lekcijām? Es gribēju aiziet šodien nu vismaz uz pirmo dienu bet man jāiet uz koncertu Bepo vakarā un man pirms tam ir jāizguļas."
+    slacker "Es te tikai esmu, jo man vajag, ka mamma domā, ka esmu unītī."
 
     es "{i}Viņš noteikti nepabeigs arī šogad. Man ir jāmēģina dabūt randiņš pirms viņu eksmatrikulē!{/i}"
 
@@ -209,7 +247,13 @@ label turp6:
 
     es "{i}Atkal! Es esmu vienkārši izgāšanās!{/i}"
 
-    slacker "OOOOOOOOh tu man reāli sit kanti, vecīt. Zini, tu liecies diezgan chill and shi, bet like.. sorry nē. Tu vēl joprojām vari darīt manus mājasdarbus doe."
+    hide slacker2
+    show slacker4
+    with fade
+
+    slacker "OOOOOOOOh tu man reāli sit kanti, vecīt. Zini, tu liecies diezgan chill and shi, bet like.. sorry nē."
+    
+    slacker "Tu vēl joprojām vari darīt manus mājasdarbus doe."
 
     jump beigas
 
@@ -217,9 +261,11 @@ label turp6:
 
 label furry_izv:
 
-    play music "binari_furry.wav"
+    scene rb19_better
 
-    show furry_temp
+    play music "binari_furry.mp3"
+
+    show furry1
     with fade
 
     "Viņš ir mainījies kopš vasaras sākuma. Tev viņš vienmēr likās savā veidā pievilcīgs."
@@ -242,11 +288,17 @@ label turp7:
 
     play sound "Elsosana.mp3"
 
-    furry "Kā tev patīk sava pirmā diena? *elsojot* Man ļoti patīk. Es esmu pavadījis visu vasaru strādājot kiberdrošībā un tik ļoti gaidu uzlabot savas prasmes!"
+    furry "Kā tev patīk sava pirmā diena? *elsojot*" 
+
+    furry "Man ļoti patīk. Es esmu pavadījis visu vasaru strādājot kiberdrošībā un tik ļoti gaidu uzlabot savas prasmes!"
 
     furry "Arī, kā vari redzēt, esmu arī mazliet mainījis savu imidžu, kā saka. Esmu sapratis savu īsto būtību. *iekaucas*"
 
     es "{i}Viņš izskatās amazing, manas jūtas ir tikai pastiprinājušās kopš vidusskolas!{/i}"
+
+    hide furry1
+    show furry2
+    with fade
 
     furry "Esmu tagad pūkainis (vai kā angliski sauktu, furry)."
 
@@ -278,11 +330,16 @@ label turp8:
 
     play sound "Elsosana.mp3"
 
+    hide furry2
+    show furry1
+    with fade
+
     furry "Tur bija bars ar pūkaiņiem! Viņi skraidīja apkārt un cīkstējās uz zemes. Tas prieks, ko viņi izstaroja, bija vienreizējs! *sāk elsot*"
 
     furry "Mēs pievienojāmies! Mēs kaucām un skrāpējām un skrējām līdz nākamā rīta gaismai un tad es zināju - šis ir mans pulks!"
 
-    furry "Kopš tā laika esmu izvestējis 3000 eiro uz mana jaunā izskata. Vai tev patīk?"
+    furry "Kopš tā laika esmu izvestējis 3000 eiro uz mana jaunā izskata."
+    furry "Vai tev patīk?"
 
     menu:
         "Tu izskaties vienreizēji!":
@@ -312,15 +369,21 @@ label turp9:
 
     es "{i}Viss, manai dzīvei nav jēga, es iešu mājās skatīties Euphoria.{/i}"
 
-    furry "Uhhh.. *pieliek ķepu priekšā sejai* es zinu, ka esmu ļoti interesanta un inteliģenta persona, bet man tiešām nešķiet, ka tu esi manā līmeni. Vai tev pat ir aste? Piedod, bet lūdzu ej prom"
+    hide furry1
+    show furry3
+    with fade
+
+    furry "Uhhh.. *pieliek ķepu priekšā sejai* es zinu, ka esmu ļoti interesanta un inteliģenta persona, bet man tiešām nešķiet, ka tu esi manā līmeni."
+
+    furry "Vai tev pat ir aste? Piedod, bet lūdzu ej prom"
 
     jump beigas
     # These display lines of dialogue.
 label beigas:
 
-    play music "game_over.wav"
-    
-    scene rb19_better
+    play music "game_over.mp3"
+
+    scene game_over
     with fade
     
     "Tu aizej mājās un raudi gultā."

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 308: Line is indented, but the preceding play music statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    return
-    ^
+File "game/script.rpy", line 22: expected 'image_name_component' not found.
+    scene "Title.png"
+          ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Fri Mar 15 16:05:39 2024
+Fri Mar 15 21:15:05 2024

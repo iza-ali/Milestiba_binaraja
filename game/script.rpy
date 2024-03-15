@@ -73,6 +73,8 @@ label turp1:
 
     es"{i}Tas nebija, ko es gribēju teikt! Es esmu nožēlojams!{/i}"
 
+    play sound "Generic_egirl_noise.mp3"
+
     egirl "Tu kaut ko teici? Tu ar mani gribēji runāt? Nē nu, es nebrīnos."
 
     egirl "Man īstenībā šo izglītību nevajag. Man jau ir savs ļoti ienesīgais bizness, liekot bildes internetā."
@@ -82,6 +84,8 @@ label turp1:
     egirl "Mani fani mani mīl un OnlyF… fui, mans galvenais sociālais medijs, manuprāt, varēs mani uzturēt līdz mūža galam."
 
     es "{i}Uzminēju{/i}"
+
+    play sound "Generic_egirl_noise.mp3"
 
     egirl "Es te tikai esmu, jo man mamma teica, ka man jādabū “īsts darbs” un jāpelna “godīga nauda”."
 
@@ -117,6 +121,8 @@ label turp3:
 
     es "…g-gribu uhhh ar.. t-tev-"
 
+    play sound "Egirl_scoff.mp3"
+
     egirl "TU tagad mēģini MANI koļīt??? Tu mazais nožēlīgais kropli! Tu vispār zini ar ko tu runā?? Ja to vispār var saukt par runāšanu"
 
     egirl "Tagad iedod man piecīti par to, ka es vispār ar tevi runāju"
@@ -136,6 +142,8 @@ label turp4:
 
     egirl "Lūdzu! Noskenē šito, samaksā un redzēsi, ko gribēji."
 
+    play sound "Solosana.mp3"
+
     "Viņa iedod QR kodu savam OnlyFans un skaļi aizsoļo prom"
 
     jump beigas
@@ -153,6 +161,8 @@ label slacker_izv:
     slacker "Ko tu skaties? Gribi ar mani uzpīpēt. Zini, īpaši priekš tevis, būs 10 eiro, lai to izdarītu."
 
     "Tu iedod viņam 10 eiro un jūs izejat ārā pagalmā."
+
+    play sound "Generic_slacker_noise.mp3"
 
     slacker "Vot šeit ir labākā vietiņa. Es jau zinu, es esmu pirmajā kursā jau trešo reizi. Bet reāli tā nebija mana vaina, Datorpogu spaidīšanas kurss vienkārši bija pārāk grūts!"
 
@@ -172,6 +182,8 @@ label turp5:
     es "uhh.. es.. uuuuhhh"
 
     es "{i}Tas galīgi nav pareizi! Viņa skaistums ir mani pataisījis mēmu!{/i}"
+
+    play sound "Smoking.mp3"
 
     slacker "Perfekti, tad ir sarunāts!"
 
@@ -212,6 +224,8 @@ label furry_izv:
 
     "Viņš ir mainījies kopš vasaras sākuma. Tev viņš vienmēr likās savā veidā pievilcīgs."
 
+    play sound "Woof.mp3"
+
     furry "Hei, mazais! *woof*"
 
     menu:
@@ -225,6 +239,9 @@ label furry_izv:
             jump turp7
 
 label turp7:
+
+    play sound "Elsosana.mp3"
+
     furry "Kā tev patīk sava pirmā diena? *elsojot* Man ļoti patīk. Es esmu pavadījis visu vasaru strādājot kiberdrošībā un tik ļoti gaidu uzlabot savas prasmes!"
 
     furry "Arī, kā vari redzēt, esmu arī mazliet mainījis savu imidžu, kā saka. Esmu sapratis savu īsto būtību. *iekaucas*"
@@ -253,9 +270,13 @@ label turp8:
 
     es "{i}Bļin, tas nebija tas, ko gribēju teikt!{/i}"
 
+    play sound "Kauksaba.mp3"
+
     furry "A vot kā tas notika? Es vienreiz gāju ar kolēģiem pārgājienā pa mežu pie Baizkraukles un mēs dzirdējām kā netālu no mums dzirdējām kaukšanu."
 
     furry "Mēs gribējām skriet, jo baidījāmies, ka tas būs vilku bars, bet tad no tās pašas vietas dzirdējām smiešanos. Aizgājām paskatīties..."
+
+    play sound "Elsosana.mp3"
 
     furry "Tur bija bars ar pūkaiņiem! Viņi skraidīja apkārt un cīkstējās uz zemes. Tas prieks, ko viņi izstaroja, bija vienreizējs! *sāk elsot*"
 
@@ -281,6 +302,8 @@ label turp9:
 
     furry "Es zinu! Izskatos vienreizēji"
 
+    play sound "Woof.mp3"
+
     furry "Kā tev iet? *ierejas*"
 
     es "{i}Man vispār iet ļoti labi. Tagad, kad esam jaunā vietā, gribēju tev kaut ko atzīt. Tu man esi ļoti ilgi paticis un es ļoti gribētu ar tevi aiziet randiņā, ja tas nav pārāk tieši teikts. Es arī gribētu zināt vairāk par tavām vasaras atklāsmēm.{/i}"
@@ -294,10 +317,15 @@ label turp9:
     jump beigas
     # These display lines of dialogue.
 label beigas:
-    scene rb19_better
-    with fade
 
     play music "game_over.wav"
+    
+    scene rb19_better
+    with fade
+    
+    "Tu aizej mājās un raudi gultā."
+
+    "Uztaisījām ar Ren'Py. Izabella un Olivers <3"
 
     # This ends the game.
 

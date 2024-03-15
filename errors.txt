@@ -2,45 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 67: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 90: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 103: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 116: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 150: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 167: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 194: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/script.rpy", line 218: choice menuitem expects a non-empty block.
-    "Es gribu tev pievienoties.":
-                                 ^
-
-File "game/script.rpy", line 237: Only one say menuitem may exist per menu.
-    es "Slay!"
-              ^
-
-File "game/script.rpy", line 249: Menu does not contain any choices.
-    menu:
-         ^
+File "game/script.rpy", line 308: Line is indented, but the preceding play music statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    return
+    ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Fri Mar 15 15:31:44 2024
+Fri Mar 15 16:05:39 2024

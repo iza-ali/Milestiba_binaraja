@@ -3,17 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define es = Character("[povname]")
+define es = Character("Tu")
 define furry = Character("Polo")
 define egirl = Character("Elīza")
-define slacker = Character("kristers")
-
-python:
-    povname = renpy.input("Kas ir tavs vārds, pirmīt?", length = 32)
-    povname = povname.strip()
-
-    if not povname:
-        povname = "Darude Sandstorm"
+define slacker = Character("Kristers")
 
 
 # The game starts here.
@@ -26,7 +19,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg rb19
+    scene rb19_better
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -145,6 +138,7 @@ label turp4:
 
     "Viņa iedod QR kodu savam OnlyFans un skaļi aizsoļo prom"
 
+    jump beigas
 
 
 label slacker_izv:
@@ -205,6 +199,7 @@ label turp6:
 
     slacker "OOOOOOOOh tu man reāli sit kanti, vecīt. Zini, tu liecies diezgan chill and shi, bet like.. sorry nē. Tu vēl joprojām vari darīt manus mājasdarbus doe."
 
+    jump beigas
 
 
 
@@ -279,7 +274,7 @@ label turp8:
             jump turp9
 
 label turp9:
-    
+
     es "…haha omg wow lol xd sheesh haha"
     
     es "Es gribu sevi nogalināt."
@@ -296,13 +291,14 @@ label turp9:
 
     furry "Uhhh.. *pieliek ķepu priekšā sejai* es zinu, ka esmu ļoti interesanta un inteliģenta persona, bet man tiešām nešķiet, ka tu esi manā līmeni. Vai tev pat ir aste? Piedod, bet lūdzu ej prom"
 
+    jump beigas
     # These display lines of dialogue.
+label beigas:
+    scene rb19_better
+    with fade
 
-scene rb19
-with fade
-
-play music "game_over.wav"
+    play music "game_over.wav"
 
     # This ends the game.
 
-    return
+return

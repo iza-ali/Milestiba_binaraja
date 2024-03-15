@@ -20,7 +20,7 @@ python:
 
 label start:
 
-    play music "binari.mp3"
+    play music "binari.wav"
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -57,7 +57,7 @@ menu:
 
 label egirl_izv:
 
-    play music "binari_stink.mp3"
+    play music "binari_stink.wav"
 
     "Tu lēnām pieej pie Elīzas, kas tevi sākumā nepamana savu augsto Demonia dēļ. Viņa ir kā sapnis. Vismaz tavi sapņi. Tu uztaisi mazliet patētisku skaņu un viņa paskatās uz tevi"
 
@@ -65,11 +65,16 @@ label egirl_izv:
     with fade
 
     menu:
-        es "Tu esi kā princese"
+        "Tu esi kā princese":
+            jump turp1
 
-        es "Vai tev patīk videospēles?"
+        "Vai tev patīk videospēles?":
+            jump turp1
 
-        es "Kā iet?"
+        "Kā iet?":
+            jump turp1
+
+label turp1: 
 
     es "*mazs pinkstiens*"
 
@@ -88,11 +93,16 @@ label egirl_izv:
     egirl "Es te tikai esmu, jo man mamma teica, ka man jādabū “īsts darbs” un jāpelna “godīga nauda”."
 
     menu:
-        es "Es neredzu problēmu ar tavu ienākumu avotu."
+        "Es neredzu problēmu ar tavu ienākumu avotu.":
+            jump turp2
 
-        es "Nu man ir prieks, ka tomēr esi šeit un dabūjām iepazīties :)"
+        "Nu man ir prieks, ka tomēr esi šeit un dabūjām iepazīties :)":
+            jump turp2
 
-        es "Kāds ir tavs OnlyFans?"
+        "Kāds ir tavs OnlyFans?":
+            jump turp2
+
+label turp2:
 
     es "uhh.. mmmmmm… shhh… uuuuuuuuuuhhhhhhh."
 
@@ -101,11 +111,16 @@ label egirl_izv:
     egirl "Tu mēms esi vai kas? Ko tu no manis gribi?"
 
     menu:
-        es "Gribi ar mani kopā sēdēt lekcijā?"
+        "Gribi ar mani kopā sēdēt lekcijā?":
+            jump turp3
 
-        es "Vai vēlies ar mani aiziet randiņā?"
+        "Vai vēlies ar mani aiziet randiņā?":
+            jump turp3
 
-        es "Kāds ir tavs OnlyFans?"
+        "Kāds ir tavs OnlyFans?":
+            jump turp3
+
+label turp3:
 
     es "…g-gribu uhhh ar.. t-tev-"
 
@@ -114,8 +129,13 @@ label egirl_izv:
     egirl "Tagad iedod man piecīti par to, ka es vispār ar tevi runāju"
 
     menu:
-        "Iedod 5 eiro"
-        "Nedod viņai neko"
+        "Iedod 5 eiro":
+            jump turp4
+
+        "Nedod viņai neko":
+            jump turp4
+
+label turp4:
 
     "Tu viņai iedod 20 eiro"
 
@@ -129,7 +149,7 @@ label egirl_izv:
 
 label slacker_izv:
 
-    play music "binari_slacker.mp3"
+    play music "binari_slacker.wav"
 
     show slacker_temp
     with fade
@@ -147,9 +167,13 @@ label slacker_izv:
     slacker "Bet reāli, tu liecies baigi labais džeks. Gribi man palīdzēt ar mājasdarbiem? Tu man tos atsūti, es tev ļauju katru mēnesi samaksāt 10 eiro lai darītu tieši šo pašu."
 
     menu:
-        "Pieņemt piedāvājumu"
+        "Pieņemt piedāvājumu":
+            jump turp5
 
-        "Atteikt"
+        "Atteikt":
+            jump turp5
+
+label turp5:
 
     es "uhh.. es.. uuuuhhh"
 
@@ -164,11 +188,16 @@ label slacker_izv:
     es "{i}Viņš noteikti nepabeigs arī šogad. Man ir jāmēģina dabūt randiņš pirms viņu eksmatrikulē!{/i}"
 
     menu:
-        es "Vai vēlies kopā ar mani pamācīties?"
-        
-        es "Kāds koncerts? Varbūt es arī varu aiziet!"
+        "Vai vēlies kopā ar mani pamācīties?":
+            jump turp6
 
-        es "Gribi iet pie manis, uzsmēķēt zāli un redzēt, kas notiek tālāk?"
+        "Kāds koncerts? Varbūt es arī varu aiziet!":
+            jump turp6
+
+        "Gribi iet pie manis, uzsmēķēt zāli un redzēt, kas notiek tālāk?":
+            jump turp6
+
+label turp6:
 
     es "uhhhhhhh….mmmmmmm… e-es t-t-tevi ko-kopā"
 
@@ -181,7 +210,7 @@ label slacker_izv:
 
 label furry_izv:
 
-    play music "binari_furry.mp3"
+    play music "binari_furry.wav"
 
     show furry_temp
     with fade
@@ -191,12 +220,16 @@ label furry_izv:
     furry "Hei, mazais! *woof*"
 
     menu:
-        es "Čau!"
+        "Čau!":
+            jump turp7
 
-        es "Čiki briki!"
+        "Čiki briki!":
+            jump turp7
 
-        es "Slay!"
+        "Slay!":
+            jump turp7
 
+label turp7:
     furry "Kā tev patīk sava pirmā diena? *elsojot* Man ļoti patīk. Es esmu pavadījis visu vasaru strādājot kiberdrošībā un tik ļoti gaidu uzlabot savas prasmes!"
 
     furry "Arī, kā vari redzēt, esmu arī mazliet mainījis savu imidžu, kā saka. Esmu sapratis savu īsto būtību. *iekaucas*"
@@ -208,14 +241,19 @@ label furry_izv:
     es "{i}Interesanti, un mazliet… seksīgi{/i}"
 
     menu:
-        es "Kas notika?"
+        "Kas notika?":
+            jump turp8
 
-        es "Gribi atnākt pie manis?"
+        "Gribi atnākt pie manis?":
+            jump turp8
 
-        es "Slay!"
+        "Slay!":
+            jump turp8
 
-        es "Es gribu tev pievienoties."
+        "Es gribu tev pievienoties.":
+            jump turp8
 
+label turp8:
     es "… uhhhh k-kas?"
 
     es "{i}Bļin, tas nebija tas, ko gribēju teikt!{/i}"
@@ -231,12 +269,17 @@ label furry_izv:
     furry "Kopš tā laika esmu izvestējis 3000 eiro uz mana jaunā izskata. Vai tev patīk?"
 
     menu:
-        es "Tu izskaties vienreizēji!"
+        "Tu izskaties vienreizēji!":
+            jump turp9
 
-        es "Slay!"
+        "Slay!":
+            jump turp9
 
-        es "Vai varu pievienoties?"
+        "Vai varu pievienoties?":
+            jump turp9
 
+label turp9:
+    
     es "…haha omg wow lol xd sheesh haha"
     
     es "Es gribu sevi nogalināt."
@@ -245,8 +288,7 @@ label furry_izv:
 
     furry "Kā tev iet? *ierejas*"
 
-    menu:
-        es "Man vispār iet ļoti labi. Tagad, kad esam jaunā vietā, gribēju tev kaut ko atzīt. Tu man esi ļoti ilgi paticis un es ļoti gribētu ar tevi aiziet randiņā, ja tas nav pārāk tieši teikts. Es arī gribētu zināt vairāk par tavām vasaras atklāsmēm."
+    es "{i}Man vispār iet ļoti labi. Tagad, kad esam jaunā vietā, gribēju tev kaut ko atzīt. Tu man esi ļoti ilgi paticis un es ļoti gribētu ar tevi aiziet randiņā, ja tas nav pārāk tieši teikts. Es arī gribētu zināt vairāk par tavām vasaras atklāsmēm.{/i}"
 
     es "Gribi… uuuuuhhhhhh… kopā sēdēt?"
 
@@ -256,7 +298,10 @@ label furry_izv:
 
     # These display lines of dialogue.
 
-    
+scene rb19
+with fade
+
+play music "game_over.wav"
 
     # This ends the game.
 
